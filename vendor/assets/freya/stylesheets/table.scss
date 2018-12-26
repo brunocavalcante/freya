@@ -1,0 +1,40 @@
+@import "variables";
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+
+  &.table--singleaction tr:hover td {
+    background-color: $color_bg;
+    cursor: pointer;
+  }
+
+  td, th {
+    text-align: left;
+  }
+
+  th {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $color_gray;
+    border-bottom: 1px solid $color_gray_line;
+    padding: 5px 10px;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid $color_gray_line;
+  }
+
+  .table__column--small {
+    width: 10px;
+  }
+  .table__column--centered {
+    text-align: center;
+  }
+  .table__column--icon {
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

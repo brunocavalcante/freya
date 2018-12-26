@@ -1,0 +1,102 @@
+@import "variables";
+
+.nav {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: $nav_color;
+  display: none;
+  border-right: 1px solid $color_bg_darker;
+
+  &, .nav__menu a {
+    color: $color_darkgray;
+  }
+
+  .nav__menu a.active, .nav__menu a.active:hover {
+    font-weight: bold;
+    
+    &, .icon {
+      color: $color_primary;
+    }
+  }
+
+  .nav__menu a:hover, .dropdown:hover .dropdown__toggle {
+    background: $nav_color_darker;
+  }
+
+  .icon {
+    margin-right: 5px;
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .nav__menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      text-align: left;
+      flex-grow: 0;
+      width: 30px;
+      color: $color_gray;
+    }
+  }
+
+  .nav__menu {
+    margin-bottom: 15px;
+
+    li {
+      display: block;
+    }
+  }
+
+  .nav__subtitle {
+    margin: 0;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    color: $color_gray;
+    font-size: 12px;
+  }
+}
+
+.nav {
+  transition: width ease-in-out 0.1s;
+}
+.nav__content {
+  transition: margin-left ease-in-out 0.1s;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+@media (min-width: $screen_tablet) {
+  html, body {
+    height: 100%;
+  }
+
+  #content {
+    background: $color_bg;
+    height: 100%;
+  }
+
+  .nav {
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    width: $nav_width;
+    display: block;
+    overflow-y: auto;
+    position: fixed;
+    top: 50px;
+  }
+  .nav__content {
+    margin-left: $nav_width;
+  }
+}

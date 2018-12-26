@@ -1,0 +1,33 @@
+@import "variables";
+
+.pretty-checkbox {
+  display: flex;
+
+  .pretty-checkbox__icon {
+    flex-grow: 0;
+    width: 24px;
+    margin-right: 5px;
+    color: #999;
+    transition: all 0.5s;
+
+    &:after {
+      content: 'check_box_outline_blank';
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .pretty-checkbox__icon:after {
+    content: 'check_box_outline';
+    color: $color_primary;
+  }
+
+  .pretty-checkbox__text {
+    font-size: 15px;
+    text-transform: none;
+    color: #333;
+    margin-top: 2px;
+  }
+}

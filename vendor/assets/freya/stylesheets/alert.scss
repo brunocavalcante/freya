@@ -1,0 +1,17 @@
+@import "variables";
+
+.alert {
+  padding: 10px 14px;
+}
+
+.alert.alert--error {
+  color: white;
+  background: $color_error;
+}
+.alert.alert--success {
+  background: blanchedalmond;
+  color: #333;
+}
+.alert.alert--info {
+  background: floralwhite;
+}

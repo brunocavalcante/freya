@@ -1,0 +1,37 @@
+@import "variables";
+
+.omnisearch {
+  .omnisearch__form {
+    display: flex;
+    position: relative;
+  }
+  input.omnisearch__input {
+    border-radius: 18px;
+    padding-left: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    color: white;
+    height: 36px;
+    transition: background-color 0.3s ease-in-out;
+    text-indent: 25px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+      background-color: white;
+      color: #333;
+    }
+    &:focus + .omnisearch__icon {
+      color: #999;
+    }
+  }
+  .omnisearch__icon {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-size: 24px;
+    color: lighten($header_bg_color, 38%);
+  }
+}

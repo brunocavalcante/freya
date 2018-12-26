@@ -1,0 +1,12 @@
+@import "variables";
+
+.breadcrumbs {
+  &, a {
+    color: $color_gray;
+    font-size: 13px;
+
+    &:hover {
+      color: darken($color_gray, 15%);  
+    }
+  }
+}

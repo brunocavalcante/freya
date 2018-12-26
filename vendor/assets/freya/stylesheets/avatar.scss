@@ -1,0 +1,73 @@
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  background: #BBB;
+  text-indent: -9999px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.avatar--letter {
+  text-decoration: none;
+  display: inline-block;
+  text-indent: 0;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  background: darksalmon;
+  line-height: 24px;
+  font-size: 12px;
+
+  &.avatar--letter--brown {
+    background: brown;
+  }
+
+  &.avatar--letter--green {
+    background: darkseagreen;
+  }
+
+  &.avatar--letter--blue {
+    background: skyblue;
+  }
+
+  &.avatar--letter--grey {
+    background: slategray;
+  }
+}
+
+.avatar--labeled {
+  white-space: nowrap;
+  text-decoration: none;
+  
+  img, .avatar--letter {
+    vertical-align: top;
+    margin-right: 5px;
+  }
+
+  &:hover .avatar__username {
+    text-decoration: none;
+  }
+}
+
+a .avatar__username {
+  text-decoration: underline;
+}
+
+.avatar__username {
+  height: 20px;
+  margin-top: 3px;
+  display: inline-block;
+  vertical-align: bottom;
+  color: #333;
+  font-weight: bold;
+
+  &.avatar__username--clean {
+    font-weight: normal;
+    text-decoration: none;
+    height: auto;
+    margin-top: 0;
+    display: block;
+    color: inherit;
+  }
+}

@@ -1,0 +1,16 @@
+@import "variables";
+
+.filter {
+  &.filter--inline {
+    display: flex;
+    align-items: bottom;
+
+    > * {
+      margin-right: $gutter;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

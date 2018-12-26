@@ -1,0 +1,17 @@
+@import "variables";
+
+.footer {
+  font-size: 12px;
+  color: #DDD;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+
+  &.footer--nav {
+    padding: 0 15px;
+    color: $nav_color_darker;
+    text-shadow: none;
+    color: #BBB;
+  }
+}
+.footer__heart {
+  color: lightcoral;
+}

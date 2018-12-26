@@ -1,0 +1,16 @@
+@import "variables";
+
+.page-header {
+  margin: 0 0 $gutter;
+  padding-bottom: $gutter;
+  border-bottom: 1px solid $color_bg_darker;
+  position: relative;
+  font-size: 32px;
+  font-weight: normal;
+
+  .page-header__toolbar {
+    position: absolute;
+    right: 0;
+    bottom: $gutter;
+  }
+}

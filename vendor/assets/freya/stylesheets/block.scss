@@ -1,0 +1,9 @@
+@import "variables";
+
+.block {
+  background-color: white;
+
+  .block__body {
+    padding: $gutter;
+  }
+}

@@ -1,0 +1,32 @@
+@import "variables";
+
+.hide {
+  display: none !important;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+.icon.icon--left {
+  margin-right: 5px;
+}
+
+.check-icon {
+  color: $color_success;
+}

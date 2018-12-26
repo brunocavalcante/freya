@@ -1,0 +1,24 @@
+@import "variables";
+
+.input, .boolean {
+  margin-bottom: $gutter;
+}
+.input {
+  &.field_with_errors {
+    label {
+      color: $color_error;
+    }
+    input, select {
+      border-color: $color_error;
+    }
+    .select2-selection {
+      border-color: $color_error;
+    }
+  }
+  span.error {
+    color: $color_error;
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+}

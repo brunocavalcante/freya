@@ -1,0 +1,9 @@
+@import "variables";
+
+.section {
+  margin-bottom: $gutter;
+
+  &.section--small {
+    margin-bottom: 5px;
+  }
+}

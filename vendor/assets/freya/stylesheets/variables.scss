@@ -1,0 +1,22 @@
+$gutter: 15px;
+
+$color_primary: #79589f;
+$color_success: mediumseagreen;
+$color_error: lightcoral;
+$color_bg: #f4f6f8;
+$color_bg_darker: darken(#EEEEF2, 2%);
+$color_darkgray: #27303a;
+$color_gray: #919eaa;
+$color_gray_line: #ebeef0;
+$color_danger: #e6391a;
+
+$screen_huge: 1500px;
+$screen_larger: 1200px;
+$screen_large: 992px;
+$screen_tablet: 768px;
+
+$nav_width: 210px;
+$nav_color: $color_bg;
+$nav_color_border: $color_bg_darker;
+$nav_color_darker: $color_bg_darker;
+$header_bg_color: $color_primary;
