@@ -1,0 +1,19 @@
+@import 'variables';
+
+.text__title {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: $color_darkgray;
+
+  &.text--separator {
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      height: 1px;
+      background: $color_gray_line;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import 'variables';
+
+.space__small {
+  margin-top: $size_small;
+  margin-bottom: $size_small;
+}
+
+.space__small--top {
+  margin-top: $size_small;
+}
+
+.space__small--right {
+  margin-right: $size_small;
+}
+
+.space__small--bottom {
+  margin-bottom: $size_small;
+}
+
+.space__small--left {
+  margin-left: $size_small;
+}
+
+.space__medium {
+  margin-top: $size_medium;
+  margin-bottom: $size_medium;
+}
+
+.space__medium--top {
+  margin-top: $size_medium;
+}
+
+.space__medium--right {
+  margin-right: $size_medium;
+}
+
+.space__medium--bottom {
+  margin-bottom: $size_medium;
+}
+
+.space__medium--left {
+  margin-left: $size_medium;
+}
+
+.space__medium {
+  margin-top: $size_medium;
+  margin-bottom: $size_medium;
+}
+
+.space__big--top {
+  margin-top: $size_big;
+}
+
+.space__big--right {
+  margin-right: $size_big;
+}
+
+.space__big--bottom {
+  margin-bottom: $size_big;
+}
+
+.space__big--left {
+  margin-left: $size_big;
+}
