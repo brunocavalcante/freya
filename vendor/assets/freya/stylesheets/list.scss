@@ -1,0 +1,17 @@
+.list {
+  li:first-child {
+    border-top: 1px solid #eee;
+  }
+
+  .list__item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-top: none;
+
+    i {
+      color: #ddd;
+    }
+  }
+}

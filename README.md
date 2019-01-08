@@ -10,10 +10,11 @@ this is a temporary readme, just to guide the developers of what is and isn't on
 ## Summary
 
 - [Components](#components)
-  -- [Lists](#lists)
-  -- [Modal](#modal)
+- [Lists](#lists)
+- [Modal](#modal)
 - [Utils](#utils)
-  -- [Space Styles](#space-styles)
+- [Text Styles](#text-styles)
+- [Space Styles](#space-styles)
 
 ## Components
 
@@ -69,6 +70,22 @@ Example:
 ```
 
 ## Utils
+
+### Text Styles
+
+This will contain the general styles for titles, subtitles, paragraphs and etc. Right now, we have only the title and It has a really simple use:
+
+```sh
+  <h1 class="text__title">This is a title</h1>
+```
+
+By default, the _text\_\_title_ class has a medium size space on the bottom, but you can change that with the [Space Styles](#space-styles).
+
+If you want a little more _fancy_ title, you can put a separator on it. It's really classy.
+
+```sh
+  <h1 class="text__title text--separator">I'm a title and I have a beautiful separator</h1>
+```
 
 ### Space Styles
 
