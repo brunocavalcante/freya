@@ -7,6 +7,14 @@ this is a temporary readme, just to guide the developers of what is and isn't on
 - [jQuery](https://jquery.com/)
 - [Material Icons](https://fonts.googleapis.com/icon?family=Material+Icons)
 
+## Summary
+
+- [Components](#components)
+  -- [Lists](#lists)
+  -- [Modal](#modal)
+- [Utils](#utils)
+  -- [Space Styles](#space-styles)
+
 ## Components
 
 ### Lists
