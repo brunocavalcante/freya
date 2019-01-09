@@ -4,8 +4,10 @@ module ChangelogHelper
     data = changelog_data(object.versions)
 
     capture do 
-      concat content_tag :h4, I18n.t(:title, scope: 'freya.changelog'), class: 'subtitle subtitle--small'
-      concat content_tag :ol, changelog_items(data), class: 'list'
+      content_tag :div, class: 'section section--top-margin-big' do 
+        concat content_tag :h4, I18n.t(:title, scope: 'freya.changelog'), class: 'subtitle subtitle--small'
+        concat content_tag :ol, changelog_items(data), class: 'changelog'
+      end
     end
   end
 

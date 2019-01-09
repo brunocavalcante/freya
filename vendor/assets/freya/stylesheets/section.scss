@@ -6,4 +6,13 @@
   &.section--small {
     margin-bottom: 5px;
   }
+
+  &.section--top-margin {
+    margin-bottom: 0;
+    margin-top: $gutter;
+  }
+  &.section--top-margin-big {
+    margin-bottom: 0;
+    margin-top: 2*$gutter;
+  }
 }
