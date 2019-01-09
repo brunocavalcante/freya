@@ -2,4 +2,24 @@
 
 .changelog {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  
+  .changelog__item {
+    display: block;
+    color: #666;
+    padding: 8px 0;
+    border-bottom: 1px dotted $color_bg_darker;
+
+    &:hover {
+      color: $color_primary;
+    }
+  }
+
+  .changelog__details {
+    margin-top: 5px;
+    background-color: $color_bg_darker;
+    padding: 10px 12px;
+  }
 }

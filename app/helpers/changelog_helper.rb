@@ -5,7 +5,7 @@ module ChangelogHelper
 
     capture do 
       content_tag :div, class: 'section section--top-margin-big' do 
-        concat content_tag :h4, I18n.t(:title, scope: 'freya.changelog'), class: 'subtitle subtitle--small'
+        concat content_tag :h4, I18n.t(:title, scope: 'freya.changelog'), class: 'subtitle subtitle--small no-bottom-margin'
         concat content_tag :ol, changelog_items(data), class: 'changelog'
       end
     end
@@ -16,7 +16,7 @@ module ChangelogHelper
     user_ids = []
     users_hash = {}
     
-    versions.each { |v| data << { version: v, user: nil }; user_ids << v.whodunnit }
+    versions.reorder('created_at DESC').limit(25).each { |v| data << { version: v, user: nil }; user_ids << v.whodunnit }
     User.where(id: user_ids).select(:id, :name).each { |u| users_hash[u.id] = u }
     data.each { |d| d[:user] = users_hash[d[:version].whodunnit.to_i] }
 
@@ -25,17 +25,38 @@ module ChangelogHelper
 
   def changelog_items(data)
     capture do 
-      data.each { |d| concat content_tag :li, changelog_item(d), class: 'changelog__item' }
+      data.each { |d| concat content_tag :li, link_to(changelog_item(d), '#', class: 'changelog__item') }
     end
   end
 
   def changelog_item(d)
+    label_class = case d[:version].event
+      when 'create' then 'tag--green'
+      when 'update' then 'tag--purple'
+      when 'destroy' then 'tag--red'
+    end
+
     capture do 
       concat I18n.l(d[:version].created_at, format: :short)
       concat ' &middot; '.html_safe
       concat d[:user].name
       concat ' &middot; '.html_safe
-      concat d[:version].event
+      concat content_tag :span, d[:version].event, class: "tag tag--mini #{label_class}" 
+
+      concat content_tag :div, changelog_details(d[:version]), class: 'changelog__details hide'
+    end
+  end
+
+  def changelog_details(version)
+    return 'Nothing to show here, sorry! :)' if !version.object_changes
+
+    capture do 
+      version.object_changes.each do |oc|
+        next if ['updated_at'].include?(oc.first)
+
+        change = "<b>#{oc.first}</b>: #{oc.last.first} &rarr; #{oc.last.last}"
+        concat content_tag :div, change.html_safe, class: 'changelog__change'
+      end
     end
   end
 end

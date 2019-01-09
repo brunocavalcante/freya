@@ -1,0 +1,24 @@
+@import "variables";
+
+.tag {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: $color_primary;
+  color: white;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &.tag--green {
+    background-color: mediumaquamarine;
+  }
+  &.tag--purple {
+    background-color: purple;
+  }
+  &.tag--red {
+    background-color: #e6391a;
+  }
+
+  &.tag--mini {
+    font-size: 11px;
+  }
+}
