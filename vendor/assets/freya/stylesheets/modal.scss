@@ -1,0 +1,65 @@
+$duration: 150ms;
+$animation: cubic-bezier(0.19, 1, 0.22, 1);
+
+.modal {
+  width: 260px;
+  z-index: 4;
+  overflow-y: auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+
+  &.modal--right {
+    background-color: #fff;
+    right: -260px;
+    transition: right $duration $animation;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.modal--open {
+  &.modal--right {
+    right: 0;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &.modal-overlay--visible {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.modal-nav {
+  height: 100%;
+
+  &.modal-nav--right {
+    background-color: #fff;
+  }
+}
+
+.modal__body {
+  padding: 30px;
+}
+
+@media (min-width: 769px) {
+  .modal.modal--right {
+    width: 640px;
+    right: -640px;
+  }
+  .modal.modal--open.modal--right {
+    right: 0;
+  }
+}
