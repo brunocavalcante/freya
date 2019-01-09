@@ -14,7 +14,6 @@ this is a temporary readme, just to guide the developers of what is and isn't on
 - [Modal](#modal)
 - [Utils](#utils)
 - [Text Styles](#text-styles)
-- [Space Styles](#space-styles)
 
 ## Components
 
@@ -76,36 +75,13 @@ Example:
 This will contain the general styles for titles, subtitles, paragraphs and etc. Right now, we have only the title and It has a really simple use:
 
 ```sh
-  <h1 class="text__title">This is a title</h1>
+  <h1 class="text-title">This is a title</h1>
 ```
 
-By default, the _text\_\_title_ class has a medium size space on the bottom, but you can change that with the [Space Styles](#space-styles).
+By default, the _text-title_ class has a medium size space on the bottom, but you can change that with the [Space Styles](#space-styles).
 
 If you want a little more _fancy_ title, you can put a separator on it. It's really classy.
 
 ```sh
-  <h1 class="text__title text--separator">I'm a title and I have a beautiful separator</h1>
-```
-
-### Space Styles
-
-Sometimes you just need some space. And no one has time to be creating classes just because you want that div to be a little bit far away from the others divs. You know, these divs these days, you can not trust it to be so close to YOUR div. Anyway, jokes aside, we got you covered ;)
-
-We have some default spaces, so you can just pick what you want on your need. This sizes are:
-
-- small: 10px
-- medium: 20px
-- big: 60px
-
-To use it you just need to put the class space + size + side. A little example, since that can be a little confusing:
-
-```sh
-  <h1 class="space__medium--left">This put a medium size space on the left side of this element</h1>
-```
-
-But if I want to put a space in both sides of a element? If I want to put it on ALL sides of the element? Oh, don't worry, we thought about that too
-
-```sh
-	<div class="space__medium--vertical">I'm putting a medium size space on the top and bottom of this div</div>
-	<div class="space__small">I'm putting a small size space on ALL sides of this div</div>
+  <h1 class="text-title text-title--separator">I'm a title and I have a beautiful separator</h1>
 ```
