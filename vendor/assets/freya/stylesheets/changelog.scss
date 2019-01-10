@@ -1,0 +1,50 @@
+@import "variables";
+
+.changelog {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+
+  .changelog__hide {
+    display: none;
+  }
+  .changelog__open, .changelog__hide {
+    font-size: 15px;
+    vertical-align: sub;
+    margin-right: 5px;
+  }
+  
+  .changelog__item {
+    display: block;
+    padding: 8px;
+    border-bottom: 1px dotted $color_bg_darker;
+    color: $color_gray;
+
+    &:hover {
+      color: #333;
+      background-color: lighten($color_bg, 2%);
+    }
+    &.changelog__item--active {
+      .changelog__open {
+        display: none;
+      }
+      .changelog__hide {
+        display: inline-block;
+      }
+      .material-icons {
+        content: 'zoom_out';
+      }
+      .changelog__details {
+        display: block;
+      }
+    }
+  }
+
+  .changelog__details {
+    background-color: $color_bg_darker;
+    margin-top: 5px;
+    display: none;
+    padding: 10px 12px;
+  }
+}

@@ -1,6 +1,9 @@
 en:
   freya:
+    changelog:
+      title: Changelog
     toolbar:
       create: Adicionar
       delete_confirm: Are you sure you want to delete this?
+
 

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'freya'
-  s.version      = '0.0.1'
+  s.version      = '0.0.21'
   s.platform     = Gem::Platform::RUBY
   s.date         = '2018-12-26'
   s.summary      = 'A Simple Design System with a lot of tools for Rails Apps'
