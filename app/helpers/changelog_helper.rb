@@ -32,18 +32,20 @@ module ChangelogHelper
   def changelog_item(d)
     label_class = case d[:version].event
       when 'create' then 'tag--green'
-      when 'update' then 'tag--purple'
+      when 'update' then 'tag--discrete'
       when 'destroy' then 'tag--red'
     end
 
     capture do 
+      concat content_tag :i, 'add_circle_outline', class: 'material-icons changelog__open'
+      concat content_tag :i, 'remove_circle_outline', class: 'material-icons changelog__hide'
       concat I18n.l(d[:version].created_at, format: :short)
       concat ' &middot; '.html_safe
       concat d[:user].name
       concat ' &middot; '.html_safe
       concat content_tag :span, d[:version].event, class: "tag tag--mini #{label_class}" 
 
-      concat content_tag :div, changelog_details(d[:version]), class: 'changelog__details hide'
+      concat content_tag :div, changelog_details(d[:version]), class: 'changelog__details'
     end
   end
 

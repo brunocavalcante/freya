@@ -8,6 +8,9 @@
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
 
+  &.tag--discrete {
+    background-color: darken($color_bg_darker, 10%);
+  }
   &.tag--green {
     background-color: mediumaquamarine;
   }
