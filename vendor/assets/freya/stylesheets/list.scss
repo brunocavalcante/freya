@@ -1,6 +1,7 @@
 @import 'variables';
 
 .list {
+  background: white;
   li:first-child {
     border-top: 1px solid $color_gray_line;
   }
@@ -9,7 +10,7 @@
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    border: 1px solid $color_gray_line;
+    border-bottom: 1px solid $color_gray_line;
     border-top: none;
 
     i {
