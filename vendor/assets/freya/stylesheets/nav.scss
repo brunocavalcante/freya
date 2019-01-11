@@ -6,6 +6,7 @@
   background-color: $nav_color;
   display: none;
   border-right: 1px solid $color_bg_darker;
+  transition: width ease-in-out 0.1s;
 
   &, .nav__menu a {
     color: $color_darkgray;
@@ -65,11 +66,54 @@
     color: $color_gray;
     font-size: 12px;
   }
+
+  .nav__submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-height: 0;
+    transition: max-height 300ms;
+    overflow: hidden;
+
+    a {
+      padding: 5px 15px 5px 26px;
+      font-size: 13px;
+      line-height: 20px;
+
+      &:before {
+        margin-right: 10px;
+        content: '↳';
+        color: $color_gray;
+      }
+    }
+  }
+
+  .nav__item {
+    &.nav__item--submenu {
+      position: relative;
+
+      &.open {
+        > a:after {
+          content: '-'
+        }
+
+        .nav__submenu {
+          max-height: 500px;
+        }
+      }
+
+      > a:after {
+        content: '+';
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        color: $color_gray;
+        font-size: 25px;
+      }
+    }
+  }
 }
 
-.nav {
-  transition: width ease-in-out 0.1s;
-}
 .nav__content {
   transition: margin-left ease-in-out 0.1s;
   margin-top: 50px;
