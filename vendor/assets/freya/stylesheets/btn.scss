@@ -27,6 +27,14 @@ html {
       }
     }
 
+    &.btn--green {
+      background-color: mediumaquamarine;
+
+      &:hover {
+        background-color: darken(mediumaquamarine, 5%);
+      }
+    }
+
     &.btn--discrete {
       background-color: $color_bg_darker;
       box-shadow: inset 0 -3px rgba(0, 0, 0, 0.1);
