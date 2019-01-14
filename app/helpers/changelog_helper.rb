@@ -41,7 +41,7 @@ module ChangelogHelper
       concat content_tag :i, 'remove_circle_outline', class: 'material-icons changelog__hide'
       concat I18n.l(d[:version].created_at, format: :short)
       concat ' &middot; '.html_safe
-      concat d[:user].name
+      concat d[:user] && d[:user].name ? d[:user].name : '👻'
       concat ' &middot; '.html_safe
       concat content_tag :span, d[:version].event, class: "tag tag--mini #{label_class}" 
 
