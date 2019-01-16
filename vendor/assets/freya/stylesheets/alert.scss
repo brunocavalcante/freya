@@ -1,7 +1,25 @@
 @import "variables";
 
 .alert {
-  padding: 10px 14px;
+  padding: 12px 14px;
+
+  &.alert--app.alert--success {
+    position: fixed;
+    top: $nav_height;
+    left: 50%;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 7px 12px 9px;
+    font-size: 14px;
+    width: 400px;
+    margin-left: -200px;
+    border-radius: 0 0 4px 4px;
+  }
+  &.alert--app {
+    margin: -20px -20px 20px -20px;
+  }
 }
 
 .alert.alert--error {
@@ -9,8 +27,8 @@
   background: $color_error;
 }
 .alert.alert--success {
-  background: blanchedalmond;
-  color: #333;
+  background: mediumaquamarine;
+  color: white;
 }
 .alert.alert--info {
   background: floralwhite;

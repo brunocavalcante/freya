@@ -116,7 +116,7 @@
 
 .nav__content {
   transition: margin-left ease-in-out 0.1s;
-  margin-top: 50px;
+  margin-top: $nav_height;
   padding: 20px;
 }
 
@@ -138,7 +138,7 @@
     display: block;
     overflow-y: auto;
     position: fixed;
-    top: 50px;
+    top: $nav_height;
   }
   .nav__content {
     margin-left: $nav_width;
