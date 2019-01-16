@@ -16,7 +16,7 @@ module ChangelogHelper
     user_ids = []
     users_hash = {}
     
-    versions.reorder('created_at DESC').limit(25).each { |v| data << { version: v, user: nil }; user_ids << v.whodunnit }
+    versions.reorder('created_at DESC').limit(15).each { |v| data << { version: v, user: nil }; user_ids << v.whodunnit }
     User.where(id: user_ids).select(:id, :name).each { |u| users_hash[u.id] = u }
     data.each { |d| d[:user] = users_hash[d[:version].whodunnit.to_i] }
 
