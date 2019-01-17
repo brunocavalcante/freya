@@ -3,3 +3,12 @@
 input[readonly] {
   background-color: $color_bg;
 }
+input[type=file] {
+  display: block;
+  border: 1px solid #DDD;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 44px;
+  width: 100%;
+  background: white;
+}

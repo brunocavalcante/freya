@@ -3,7 +3,7 @@
 .alert {
   padding: 12px 14px;
 
-  &.alert--app.alert--success {
+  &.alert--app.alert--success, &.alert--app.alert--notice {
     position: fixed;
     top: $nav_height;
     left: 50%;
@@ -26,10 +26,7 @@
   color: white;
   background: $color_error;
 }
-.alert.alert--success {
+.alert.alert--success, .alert.alert--notice {
   background: mediumaquamarine;
   color: white;
-}
-.alert.alert--info {
-  background: floralwhite;
 }
