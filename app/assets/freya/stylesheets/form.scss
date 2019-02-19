@@ -5,10 +5,10 @@ input[readonly] {
 }
 input[type=file] {
   display: block;
-  border: 1px solid #DDD;
+  border: 1px solid #EEE;
   padding: 10px;
   box-sizing: border-box;
-  height: 44px;
+  height: $input_height;
   width: 100%;
   background: white;
 }

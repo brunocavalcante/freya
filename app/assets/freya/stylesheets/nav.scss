@@ -109,6 +109,7 @@
         right: 15px;
         color: $color_gray;
         font-size: 25px;
+        font-weight: normal;
       }
     }
   }
@@ -122,11 +123,6 @@
 
 @media (min-width: $screen_tablet) {
   html, body {
-    height: 100%;
-  }
-
-  #content {
-    background: $color_bg;
     height: 100%;
   }
 

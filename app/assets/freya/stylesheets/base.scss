@@ -1,5 +1,9 @@
 @import "variables";
 
+body {
+  background-color: $color_bg;
+}
+
 a {
   color: $color_primary;
   text-decoration: none;

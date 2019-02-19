@@ -9,7 +9,7 @@
     padding: 0 15px;
     color: $nav_color_darker;
     text-shadow: none;
-    color: #BBB;
+    color: lighten($color_gray, 5%);
   }
 }
 .footer__heart {
