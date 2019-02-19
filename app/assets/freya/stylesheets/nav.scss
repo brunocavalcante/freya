@@ -5,19 +5,20 @@
   padding-bottom: 15px;
   background-color: $nav_color;
   display: none;
-  border-right: 1px solid $color_bg_darker;
   transition: width ease-in-out 0.1s;
 
   &, .nav__menu a {
     color: $color_darkgray;
   }
 
+  .nav__menu a {
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
   .nav__menu a.active, .nav__menu a.active:hover {
-    font-weight: bold;
-    
-    &, .icon {
-      color: $color_primary;
-    }
+    background-color: darken($nav_color_darker, 3%);
+    font-weight: 600;
   }
 
   .nav__menu a:hover, .dropdown:hover .dropdown__toggle {
