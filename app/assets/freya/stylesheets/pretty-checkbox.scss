@@ -30,4 +30,9 @@
     color: #333;
     margin-top: 2px;
   }
+
+  & + .help-block {
+    display: block;
+    margin-top: -2px;
+  }
 }

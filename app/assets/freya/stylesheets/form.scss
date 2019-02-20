@@ -1,14 +1,43 @@
 @import "variables";
 
+input[type=text], 
+input[type=email], 
+input[type=password], 
+input[type=date], 
+input[type=number], 
+input[type=tel], 
+select, 
+textarea {
+  border-color: $color_bg_darker;
+}
+
 input[readonly] {
   background-color: $color_bg;
 }
 input[type=file] {
+  border: 1px solid $color_bg_darker;
   display: block;
-  border: 1px solid #EEE;
   padding: 10px;
   box-sizing: border-box;
   height: $input_height;
   width: 100%;
   background: white;
+}
+
+fieldset {
+  margin: 2*$gutter 0 $gutter;
+  padding: $gutter 0 0 2*$gutter;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+  border-color: $color_bg_darker;
+}
+
+legend {
+  background-color: $color_bg;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  font-weight: 500;
+  color: $color_gray;
 }
