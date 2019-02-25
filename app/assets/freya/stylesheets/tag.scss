@@ -12,6 +12,7 @@
   max-width: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
+  vertical-align: text-bottom;
 
   &.tag--discrete {
     background-color: darken($color_bg_darker, 10%);
