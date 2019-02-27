@@ -7,6 +7,12 @@
   color: white;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
+  white-space: nowrap;
+  text-align: center;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: text-bottom;
 
   &.tag--discrete {
     background-color: darken($color_bg_darker, 10%);
@@ -23,5 +29,8 @@
 
   &.tag--mini {
     font-size: 11px;
+  }
+  &.tag--block {
+    display: block;
   }
 }
