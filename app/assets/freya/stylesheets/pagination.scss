@@ -1,0 +1,34 @@
+/* Compatible with Pagy */
+@import "variables";
+
+.pagination {
+  margin-top: $gutter;
+
+  .page {
+    display: inline-block;
+
+    a, &.active, &.disabled {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: 1px solid $color_gray_line;
+      color: #333;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      display: none;
+    }
+    &.active {
+      font-weight: 600;
+      color: white;
+      
+      &, &:hover {
+        background-color: $color_primary;
+      }
+    }
+    &:hover {
+      background-color: $color_gray_line;
+    }
+  }
+}
