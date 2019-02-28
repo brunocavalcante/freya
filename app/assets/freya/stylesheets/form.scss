@@ -37,7 +37,7 @@ input[type=file] {
 fieldset {
   margin: 2*$gutter 0 $gutter;
   padding: $gutter 0 0 2*$gutter;
-  border-width: 2px 0 0 0;
+  border-width: 1px 0 0 0;
   border-style: solid;
   border-color: $color_bg_darker;
 }
@@ -50,4 +50,27 @@ legend {
   margin-left: -10px;
   font-weight: 500;
   color: $color_gray;
+
+  small {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $screen_large) {
+  html fieldset {
+    position: relative;
+    padding-left: 320px;
+
+    legend {
+      position: absolute;
+      left: 0;
+      max-width: 300px;
+
+      small {
+        display: block;
+        font-weight: normal;
+        margin-top: 5px;
+      }
+    }
+  }
 }
