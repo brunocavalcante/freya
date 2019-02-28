@@ -6,6 +6,7 @@ input[type=password],
 input[type=date], 
 input[type=number], 
 input[type=tel], 
+input[type=datetime-local], 
 select, 
 textarea {
   border-color: $color_bg_darker;

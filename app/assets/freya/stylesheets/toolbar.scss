@@ -1,0 +1,39 @@
+@import "variables";
+
+.toolbar {
+  margin-top: 7px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
+  background-color: $color_gray_line;
+  padding: 5px;
+
+  .toolbar__tabs {
+    display: flex;
+    margin-bottom: -5px;
+
+    a {
+      font-size: 14px;
+      padding: 16px 20px;
+      color: #333;
+      display: block;
+
+      &.active {
+        font-weight: 600;
+
+        &, &:hover {
+          background-color: $color_bg;
+        }
+      }
+
+      &:hover {
+        background-color: darken($color_bg, 1%);
+      }
+    }
+  }
+  
+  .toolbar__right {
+    text-align: right;
+    flex-grow: 1;
+  }
+}
