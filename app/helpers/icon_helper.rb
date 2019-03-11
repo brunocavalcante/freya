@@ -1,7 +1,9 @@
 module IconHelper
-  def check_icon(checked)
+  def check_icon(checked, options = {})
     return if !checked
-    content_tag :i, 'done', class: 'material-icons check-icon'
+    options[:class] ||= ''
+    options[:class] += ' material-icons check-icon'
+    content_tag :i, 'done', options
   end
 
   def edit_icon(text = 'Edit')
