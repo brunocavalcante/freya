@@ -8,6 +8,14 @@
   background-color: $color_gray_line;
   padding: 5px;
 
+  > a {
+    margin-right: 10px;
+  }
+
+  .toolbar__right {
+    text-align: right;
+  }
+
   .toolbar__tabs {
     display: flex;
     margin-bottom: -5px;

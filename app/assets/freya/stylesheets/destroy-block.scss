@@ -1,0 +1,13 @@
+@import "variables";
+
+.destroy-block {
+  margin-top: 2*$gutter;
+  border-top: 1px solid $color_bg_darker;
+  padding-top: $gutter;
+
+  p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: $color_gray;
+  }
+}

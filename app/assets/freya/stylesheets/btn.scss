@@ -10,6 +10,7 @@ html {
     border-radius: 3px;
     font-weight: bold;
     white-space: nowrap;
+    transition: all ease-in-out 200ms;
 
     &.btn--iconable {
       padding-top: 9px;
@@ -66,6 +67,22 @@ html {
     &.btn--nano {
       text-transform: uppercase;
       font-size: 13px;
+      padding: 8px 12px 10px;
+      height: auto;
+
+      .icon {
+        font-size: 16px;
+      }
+    }
+
+    &.btn--destroy {
+      background-color: $color_bg_darker;
+      color: #666;
+
+      &:hover {
+        background-color: $color_danger;
+        color: white;
+      }
     }
   }
 }
