@@ -1,0 +1,12 @@
+html {
+  .flatpickr-input[readonly] {
+    background-color: white;
+  }
+  .flatpickr-time .numInput {
+    border: 0;
+
+    &, &:focus {
+      box-shadow: none;
+    }
+  }
+}

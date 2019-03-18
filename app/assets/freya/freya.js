@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require selectize
+//= require flatpickr
 //= require_tree .
