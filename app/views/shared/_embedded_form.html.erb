@@ -1,0 +1,38 @@
+<!-- Ajax embeded form stuff -->
+<!--
+  - The resource form MUST define 'simple_form_for @resource'
+  - resource_name MUST be singular
+  - every selector relay on resource_name
+ -->
+
+<% content_for :append_extra do %>
+  <%
+    # remove suffix _id from association name
+    resource_name  = resource_name.to_s.sub(/_id$/, ''.freeze)
+    plural_name    = resource_name.to_s.pluralize
+    resource_class = resource_name.to_s.camelize.constantize
+
+    container_id = "embedded-form-#{resource_name}"
+  %>
+
+  <div class="_<%= resource_name %> modal-overlay"></div>
+  <div class="_<%= resource_name %> modal modal--right">
+    <h2 class="text-title" style="padding: 16px 30px 0px; margin: 0px">
+      <%= resource_name.to_s.humanize %>
+    </h2>
+
+    <div class="embedded-form modal__body" id="<%= container_id %>" data-resource="<%= resource_name %>">
+      <!-- Saving previous @resource -->
+      <!-- May be the associated resource -->
+      <% old_resource = @resource %>
+
+      <%= render partial: "#{plural_name}/form",
+                 locals:  { "@resource": resource_class.new },
+                 layout:  false %>
+
+      <!-- Restoring old @resource -->
+      <% @resource = old_resource %>
+    </div>
+  </div>
+
+<% end %>

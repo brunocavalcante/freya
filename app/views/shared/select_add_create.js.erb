@@ -1,0 +1,12 @@
+var resourceName = "<%= @resource.class.name.underscore %>"
+var selectElement = document.querySelector("select[data-selectize='" + resourceName + "']")
+
+if (selectElement) {
+  selectElement.selectize.addOption({
+    value: '<%= @resource.id %>',
+    text: '<%= @resource %>' // expect resource define to_s with a pretty nameaaaa
+  })
+
+  selectElement.selectize.addItem('<%= @resource.id %>')
+  selectElement.selectize.refreshOptions(false)
+}

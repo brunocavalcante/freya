@@ -1,0 +1,19 @@
+$image_size: 100px;
+
+div.single-image-upload {
+  position: relative;
+  min-height: $image_size;
+  padding-left: $image_size + 15px;
+
+  img, .single-image-upload__noimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .single-image-upload__noimg {
+    width: $image_size;
+    height: $image_size;
+    background-color: darken(#eeeef2, 2%);
+  }
+}
