@@ -9,7 +9,7 @@ module ToolbarHelper
   end
 
   def edit_link(url, name, options = {})
-    link_to url, class: 'btn btn--edit btn--iconable btn--nano', method: :put do 
+    link_to url, class: 'btn btn--edit btn--iconable btn--nano', method: :get do 
       content_tag :div, class: 'flexbox flexbox--vcentered' do
         concat content_tag :i, 'edit', class: 'material-icons icon icon--left flexbox__fixed'
         concat name
