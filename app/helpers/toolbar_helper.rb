@@ -8,6 +8,15 @@ module ToolbarHelper
     end
   end
 
+  def edit_link(url, name, options = {})
+    link_to url, class: 'btn btn--edit btn--iconable btn--nano', method: :put do 
+      content_tag :div, class: 'flexbox flexbox--vcentered' do
+        concat content_tag :i, 'edit', class: 'material-icons icon icon--left flexbox__fixed'
+        concat name
+      end
+    end
+  end
+
   def destroy_link(url, name, options = {})
     link_to url, class: 'btn btn--destroy btn--iconable btn--nano', method: :delete, data: { confirm: I18n.t(:delete_confirm, scope: 'freya.toolbar') } do 
       content_tag :div, class: 'flexbox flexbox--vcentered' do
