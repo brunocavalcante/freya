@@ -3,7 +3,7 @@ en:
     changelog:
       title: Changelog
     toolbar:
-      create: Adicionar
+      create: Add
       delete_confirm: Are you sure you want to delete this?
 
 

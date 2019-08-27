@@ -1,0 +1,7 @@
+en:
+  freya:
+    changelog:
+      title: Histórico de Alterações
+    toolbar:
+      create: Adicionar
+      delete_confirm: Tem certeza que deseja remover isso?
