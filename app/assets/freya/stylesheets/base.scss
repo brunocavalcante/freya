@@ -2,9 +2,21 @@
 
 body {
   background-color: $color_bg;
+  &.overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 a {
   color: $color_primary;
   text-decoration: none;
+}
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
 }

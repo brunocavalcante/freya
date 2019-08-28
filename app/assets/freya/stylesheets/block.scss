@@ -2,8 +2,15 @@
 
 .block {
   background-color: white;
+  margin: 0 -15px;
 
   .block__body {
     padding: $gutter;
+  }
+}
+
+@media (min-width: $screen_tablet) { 
+  .block {
+    margin: 0;
   }
 }

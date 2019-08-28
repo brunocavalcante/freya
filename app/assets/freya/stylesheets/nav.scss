@@ -4,8 +4,23 @@
   padding-top: 10px;
   padding-bottom: 15px;
   background-color: $nav_color;
-  display: none;
-  transition: width ease-in-out 0.1s;
+  position: fixed;
+  left: -100%;
+  top: 50px;
+  z-index: 2;
+  width: 100%;
+  height: calc(100% - 51px);
+  transition: all ease-in-out 0.3s;
+
+  &.nav--open {
+    left: 0;
+    overflow-y: auto;
+
+    a:hover,
+    a.active {
+      border-radius: 0;
+    }
+  }
 
   &, .nav__menu a {
     color: $color_darkgray;
@@ -119,7 +134,7 @@
 .nav__content {
   transition: margin-left ease-in-out 0.1s;
   margin-top: $nav_height;
-  padding: 20px;
+  padding: 15px;
 }
 
 @media (min-width: $screen_tablet) {
@@ -136,8 +151,10 @@
     overflow-y: auto;
     position: fixed;
     top: $nav_height;
+    left: 0;
   }
   .nav__content {
     margin-left: $nav_width;
+    padding: 20px;
   }
 }
